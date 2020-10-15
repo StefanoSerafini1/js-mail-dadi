@@ -27,13 +27,23 @@ if (emailtf === true) {
 }
 
 //2° esercizio gioco dei dadi utente contro pc
-unction myFunction() {
-  //primo lancio
-  x = Math.floor((Math.random() * 6) + 1);
-  document.getElementById("user").innerHTML = x;
-  //second lancio
-  y = Math.floor((Math.random() * 6) + 1);
-  document.getElementById("pc").innerHTML = y;
 
-  
+btn.addEventListener("click", function () {
+var btn = document.getElementById('btn');
+var user = Math.floor(Math.random() * 6 + 1);
+var pc = Math.floor(Math.random() * 6 + 1);
+
+document.getElementById('user').innerHTML = 'il risulato del tuo lancio è  ' + user;
+document.getElementById('pc').innerHTML = 'il risulato del lancio del tuo avversario  ' +  pc;
+
+if (user > pc) {
+    console.log("Vince il giocatore!");
+    document.getElementById('risultato').innerHTML = 'HAI VINTO';
+} else if (pc > user) {
+    console.log("Vince il computer!");
+    document.getElementById('risultato').innerHTML = 'HAI PERSO';
+} else {
+    console.log("Avete pareggiato!");
+    document.getElementById('risultato').innerHTML = 'PAREGGIO';
 }
+});
