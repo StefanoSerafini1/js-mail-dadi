@@ -30,12 +30,13 @@ if (emailtf === true) {
 
 btn.addEventListener("click", function () {
 var btn = document.getElementById('btn');
+//valori random da 1 a 6
 var user = Math.floor(Math.random() * 6 + 1);
 var pc = Math.floor(Math.random() * 6 + 1);
-
+//stampa valori user e pc
 document.getElementById('user').innerHTML = 'il risulato del tuo lancio è  ' + user;
-document.getElementById('pc').innerHTML = 'il risulato del lancio del tuo avversario  ' +  pc;
-
+document.getElementById('pc').innerHTML = 'il risulato del lancio del tuo avversario ' +  pc;
+//ciclo if per decidere chi ha vinto con stampa risulato
 if (user > pc) {
     console.log("Vince il giocatore!");
     document.getElementById('risultato').innerHTML = 'HAI VINTO';
