@@ -25,3 +25,15 @@ if (emailtf === true) {
   console.log('email non corretta: ' + newEmail);
   document.getElementById('emaildone').innerHTML = 'email non corretta: ' + newEmail;
 }
+
+//2° esercizio gioco dei dadi utente contro pc
+unction myFunction() {
+  //primo lancio
+  x = Math.floor((Math.random() * 6) + 1);
+  document.getElementById("user").innerHTML = x;
+  //second lancio
+  y = Math.floor((Math.random() * 6) + 1);
+  document.getElementById("pc").innerHTML = y;
+
+  
+}
